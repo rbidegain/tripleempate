@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Triple Empate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>  -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+
+ 
+<script type="text/javascript">
+function validarFormulario(){
+	p1s1j1 = parseInt($('#p1s1j1').val()); 
+	p1s2j1 = parseInt($('#p1s2j1').val()); 
+	p1s3j1 = parseInt($('#p1s3j1').val()); 
+	p1s4j1 = parseInt($('#p1s4j1').val()); 
+	p1s5j1 = parseInt($('#p1s5j1').val()); 
+	p1s6j1 = parseInt($('#p1s6j1').val()); 
+	p1s7j1 = parseInt($('#p1s7j1').val()); 
+
+	p1s1j2 = parseInt($('#p1s1j2').val()); 
+	p1s2j2 = parseInt($('#p1s2j2').val()); 
+	p1s3j2 = parseInt($('#p1s3j2').val()); 
+	p1s4j2 = parseInt($('#p1s4j2').val()); 
+	p1s5j2 = parseInt($('#p1s5j2').val()); 
+	p1s6j2 = parseInt($('#p1s6j2').val()); 
+	p1s7j2 = parseInt($('#p1s7j2').val()); 
+
+
+	p2s1j1 = parseInt($('#p2s1j1').val()); 
+	p2s2j1 = parseInt($('#p2s2j1').val()); 
+	p2s3j1 = parseInt($('#p2s3j1').val()); 
+	p2s4j1 = parseInt($('#p2s4j1').val()); 
+	p2s5j1 = parseInt($('#p2s5j1').val()); 
+	p2s6j1 = parseInt($('#p2s6j1').val()); 
+	p2s7j1 = parseInt($('#p2s7j1').val()); 
+                                        
+	p2s1j2 = parseInt($('#p2s1j2').val()); 
+	p2s2j2 = parseInt($('#p2s2j2').val()); 
+	p2s3j2 = parseInt($('#p2s3j2').val()); 
+	p2s4j2 = parseInt($('#p2s4j2').val()); 
+	p2s5j2 = parseInt($('#p2s5j2').val()); 
+	p2s6j2 = parseInt($('#p2s6j2').val()); 
+	p2s7j2 = parseInt($('#p2s7j2').val()); 
+
+
+	p3s1j1 = parseInt($('#p3s1j1').val()); 
+	p3s2j1 = parseInt($('#p3s2j1').val()); 
+	p3s3j1 = parseInt($('#p3s3j1').val()); 
+	p3s4j1 = parseInt($('#p3s4j1').val()); 
+	p3s5j1 = parseInt($('#p3s5j1').val()); 
+	p3s6j1 = parseInt($('#p3s6j1').val()); 
+	p3s7j1 = parseInt($('#p3s7j1').val()); 
+                                        
+	p3s1j2 = parseInt($('#p3s1j2').val()); 
+	p3s2j2 = parseInt($('#p3s2j2').val()); 
+	p3s3j2 = parseInt($('#p3s3j2').val()); 
+	p3s4j2 = parseInt($('#p3s4j2').val()); 
+	p3s5j2 = parseInt($('#p3s5j2').val()); 
+	p3s6j2 = parseInt($('#p3s6j2').val()); 
+	p3s7j2 = parseInt($('#p3s7j2').val()); 
+	
+	sgj1 = 0;
+	sgj2 = 0;
+	sgj3 = 0;
+	spj1 = 0;
+	spj2 = 0;
+	spj3 = 0;
+	
+	r1=0;
+	r2=0;
+	r3=0;
+	r4=0;
+	r5=0;
+	r6=0;
+	
+	//partido 1
+	r1 += p1s1j1 > p1s1j2 ? 1: 0;
+	r1 += p1s2j1 > p1s2j2 ? 1: 0;
+	r1 += p1s3j1 > p1s3j2 ? 1: 0;
+	r1 += p1s4j1 > p1s4j2 ? 1: 0;
+	r1 += p1s5j1 > p1s5j2 ? 1: 0;
+	r1 += p1s6j1 > p1s6j2 ? 1: 0;
+	r1 += p1s7j1 > p1s7j2 ? 1: 0;
+
+	r2 += p1s1j2 > p1s1j1 ? 1: 0;
+	r2 += p1s2j2 > p1s2j1 ? 1: 0;
+	r2 += p1s3j2 > p1s3j1 ? 1: 0;
+	r2 += p1s4j2 > p1s4j1 ? 1: 0;
+	r2 += p1s5j2 > p1s5j1 ? 1: 0;
+	r2 += p1s6j2 > p1s6j1 ? 1: 0;
+	r2 += p1s7j2 > p1s7j1 ? 1: 0;
+
+	//partido 2
+	r3 += p2s1j1 > p2s1j2 ? 1: 0;
+	r3 += p2s2j1 > p2s2j2 ? 1: 0;
+	r3 += p2s3j1 > p2s3j2 ? 1: 0;
+	r3 += p2s4j1 > p2s4j2 ? 1: 0;
+	r3 += p2s5j1 > p2s5j2 ? 1: 0;
+	r3 += p2s6j1 > p2s6j2 ? 1: 0;
+	r3 += p2s7j1 > p2s7j2 ? 1: 0;
+            
+	r4 += p2s1j2 > p2s1j1 ? 1: 0;
+	r4 += p2s2j2 > p2s2j1 ? 1: 0;
+	r4 += p2s3j2 > p2s3j1 ? 1: 0;
+	r4 += p2s4j2 > p2s4j1 ? 1: 0;
+	r4 += p2s5j2 > p2s5j1 ? 1: 0;
+	r4 += p2s6j2 > p2s6j1 ? 1: 0;
+	r4 += p2s7j2 > p2s7j1 ? 1: 0;
+
+	//partido 3
+	r5 += p3s1j1 > p3s1j2 ? 1: 0;
+	r5 += p3s2j1 > p3s2j2 ? 1: 0;
+	r5 += p3s3j1 > p3s3j2 ? 1: 0;
+	r5 += p3s4j1 > p3s4j2 ? 1: 0;
+	r5 += p3s5j1 > p3s5j2 ? 1: 0;
+	r5 += p3s6j1 > p3s6j2 ? 1: 0;
+	r5 += p3s7j1 > p3s7j2 ? 1: 0;
+            
+	r6 += p3s1j2 > p3s1j1 ? 1: 0;
+	r6 += p3s2j2 > p3s2j1 ? 1: 0;
+	r6 += p3s3j2 > p3s3j1 ? 1: 0;
+	r6 += p3s4j2 > p3s4j1 ? 1: 0;
+	r6 += p3s5j2 > p3s5j1 ? 1: 0;
+	r6 += p3s6j2 > p3s6j1 ? 1: 0;
+	r6 += p3s7j2 > p3s7j1 ? 1: 0;
+
+	//sets ganados
+	sgj1 = r1 + r3;
+	sgj2 = r2 + r5;
+	sgj3 = r4 + r6;
+	
+	//sets perdidos
+	spj1 = r2 + r4;
+	spj2 = r1 + r6;
+	spj3 = r3 + r5;
+
+	r1=0;
+	r2=0;
+	r3=0;
+	r4=0;
+	r5=0;
+	r6=0;
+	
+	//partido 1
+	//console.log(typeof(p1s1j1));
+	r1 += isNaN(p1s1j1)?0:p1s1j1;
+	r1 += isNaN(p1s2j1)?0:p1s2j1;
+	r1 += isNaN(p1s3j1)?0:p1s3j1;
+	r1 += isNaN(p1s4j1)?0:p1s4j1;
+	r1 += isNaN(p1s5j1)?0:p1s5j1;
+	r1 += isNaN(p1s6j1)?0:p1s6j1;
+	r1 += isNaN(p1s7j1)?0:p1s7j1;
+
+	r2 += isNaN(p1s1j2)?0:p1s1j2;
+	r2 += isNaN(p1s2j2)?0:p1s2j2;
+	r2 += isNaN(p1s3j2)?0:p1s3j2;
+	r2 += isNaN(p1s4j2)?0:p1s4j2;
+	r2 += isNaN(p1s5j2)?0:p1s5j2;
+	r2 += isNaN(p1s6j2)?0:p1s6j2;
+	r2 += isNaN(p1s7j2)?0:p1s7j2;
+
+	//partido 2
+	r3 += isNaN(p2s1j1)?0:p2s1j1;
+	r3 += isNaN(p2s2j1)?0:p2s2j1;
+	r3 += isNaN(p2s3j1)?0:p2s3j1;
+	r3 += isNaN(p2s4j1)?0:p2s4j1;
+	r3 += isNaN(p2s5j1)?0:p2s5j1;
+	r3 += isNaN(p2s6j1)?0:p2s6j1;
+	r3 += isNaN(p2s7j1)?0:p2s7j1;
+						   
+	r4 += isNaN(p2s1j2)?0:p2s1j2;
+	r4 += isNaN(p2s2j2)?0:p2s2j2;
+	r4 += isNaN(p2s3j2)?0:p2s3j2;
+	r4 += isNaN(p2s4j2)?0:p2s4j2;
+	r4 += isNaN(p2s5j2)?0:p2s5j2;
+	r4 += isNaN(p2s6j2)?0:p2s6j2;
+	r4 += isNaN(p2s7j2)?0:p2s7j2;
+
+	//partido 3
+	r5 += isNaN(p3s1j1)?0:p3s1j1;
+	r5 += isNaN(p3s2j1)?0:p3s2j1;
+	r5 += isNaN(p3s3j1)?0:p3s3j1;
+	r5 += isNaN(p3s4j1)?0:p3s4j1;
+	r5 += isNaN(p3s5j1)?0:p3s5j1;
+	r5 += isNaN(p3s6j1)?0:p3s6j1;
+	r5 += isNaN(p3s7j1)?0:p3s7j1;
+				 
+	r6 += isNaN(p3s1j2)?0:p3s1j2;
+	r6 += isNaN(p3s2j2)?0:p3s2j2;
+	r6 += isNaN(p3s3j2)?0:p3s3j2;
+	r6 += isNaN(p3s4j2)?0:p3s4j2;
+	r6 += isNaN(p3s5j2)?0:p3s5j2;
+	r6 += isNaN(p3s6j2)?0:p3s6j2;
+	r6 += isNaN(p3s7j2)?0:p3s7j2;
+	
+	//puntos ganados
+	pgj1 = r1 + r3
+	pgj2 = r2 + r5
+	pgj3 = r4 + r6
+	
+	//puntos perdidos
+	ppj1 = r2 + r4
+	ppj2 = r1 + r6
+	ppj3 = r3 + r5
+
+
+	//msg = "<i>" + sgj1 + " " + sgj2 + " " + sgj3 +"</i>";
+	//msg = "<i>" + spj1 + " " + spj2 + " " + spj3 +"</i>";
+
+	msg = "<i>Coeficientes por Set</i>";
+	msg += "<table>";
+	msg += "<tr><td>Jugador</td> <td>Ganados</td> <td>Perdidos</td> <td>Coef</td></tr>";
+	msg += "<tr><td>"+$('#nombreA').val()+"</td> <td>"+sgj1+"</td> <td>"+spj1+"</td> <td>"+(sgj1/spj1).toFixed(4)+"</td></tr>";
+	msg += "<tr><td>"+$('#nombreB').val()+"</td> <td>"+sgj2+"</td> <td>"+spj2+"</td> <td>"+(sgj2/spj2).toFixed(4)+"</td></tr>";
+	msg += "<tr><td>"+$('#nombreC').val()+"</td> <td>"+sgj3+"</td> <td>"+spj3+"</td> <td>"+(sgj3/spj3).toFixed(4)+"</td></tr>";
+	msg += "</table>";
+	msg += "<br><i>Coeficientes por Puntos</i>";
+	msg += "<table>";
+	msg += "<tr><td>Jugador</td> <td>Ganados</td> <td>Perdidos</td> <td>Coef</td></tr>";
+	msg += "<tr><td>"+$('#nombreA').val()+"</td> <td>"+pgj1+"</td> <td>"+ppj1+"</td> <td>"+(pgj1/ppj1).toFixed(4)+"</td></tr>";
+	msg += "<tr><td>"+$('#nombreB').val()+"</td> <td>"+pgj2+"</td> <td>"+ppj2+"</td> <td>"+(pgj2/ppj2).toFixed(4)+"</td></tr>";
+	msg += "<tr><td>"+$('#nombreC').val()+"</td> <td>"+pgj3+"</td> <td>"+ppj3+"</td> <td>"+(pgj3/ppj3).toFixed(4)+"</td></tr>";
+	msg += "</table>";
+
+	$("#resultados").html(msg);  
+}
+function SetJugadores() {
+	ja = $('#nombreA').val(); 
+	jb = $('#nombreB').val(); 
+	jc = $('#nombreC').val(); 
+	
+	$("#idA1").text(ja);  
+	$("#idA2").text(ja);  
+
+	$("#idB1").text(jb);  
+	$("#idB2").text(jb);  
+
+	$("#idC1").text(jc);  
+	$("#idC2").text(jc);  
+}
+</script>
+
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body { background: #4895EF !important;}
+</style>
+
+</head>
+<body>
+<center>
+<strong>Triple empate en Tenis de Mesa</strong>
+
+
+<form id="frmJugadores">
+
+<table class="table table-responsive table-bordered table-striped table-sm">
+<tr>	
+	<td>	<label for="jA">A:</label> </td>
+	<td>	<input id="nombreA" type="text" name="nombreA" value="A" size="10" /> </td>
+</tr>		
+<tr>	
+	<td>	<label for="jB">B:</label> </td>
+	<td>	<input id="nombreB" type="text" name="nombreB" value="B" size="10" /> </td>
+</tr>		
+<tr>	
+	<td>	<label for="jC">C:</label> </td>
+	<td>	<input id="nombreC" type="text" name="nombreC" value="C" size="10" /> </td>
+</tr>		
+<tr>	
+	<td colspan="2"><input onclick="SetJugadores()" type="button" value="Poner Nombres" /> </td>
+</tr>		
+</table> 	
+
+</form>
+
+
+	<form id="formulario">
+<!-- Partido 1 jugador A -->  
+
+<table class="table table-responsive table-bordered table-striped table-sm">
+<tr>	
+	<td>	<label id="idA1">A:</label> </td>
+	<td>	<input id="p1s1j1" type="text" name="p1s1j1" value="" size="1" /> </td>
+	<td>	<input id="p1s2j1" type="text" name="p1s2j1" value="" size="1" /> </td>
+	<td>	<input id="p1s3j1" type="text" name="p1s3j1" value="" size="1" /> </td>
+	<td>	<input id="p1s4j1" type="text" name="p1s4j1" value="" size="1" /> </td>
+	<td>	<input id="p1s5j1" type="text" name="p1s5j1" value="" size="1" /> </td>
+	<td>	<input id="p1s6j1" type="text" name="p1s6j1" value="" size="1" /> </td>
+	<td>	<input id="p1s7j1" type="text" name="p1s7j1" value="" size="1" /> </td>
+</tr>
+<!-- Partido 1 jugador B -->  
+<tr>	
+	<td>	<label id="idB1">B:</label> </td>
+	<td>	<input id="p1s1j2" type="text" name="p1s1j2" value="" size="1" /> </td>
+	<td>	<input id="p1s2j2" type="text" name="p1s2j2" value="" size="1" /> </td>
+	<td>	<input id="p1s3j2" type="text" name="p1s3j2" value="" size="1" /> </td>
+	<td>	<input id="p1s4j2" type="text" name="p1s4j2" value="" size="1" /> </td>
+	<td>	<input id="p1s5j2" type="text" name="p1s5j2" value="" size="1" /> </td>
+	<td>	<input id="p1s6j2" type="text" name="p1s6j2" value="" size="1" /> </td>
+	<td>	<input id="p1s7j2" type="text" name="p1s7j2" value="" size="1" /> </td>
+</tr>
+
+
+	
+<!-- Partido 2 jugador A -->  
+<tr>	
+	<td>	<label id="idA2">A:</label> </td>
+	<td>	<input id="p2s1j1" type="text" name="p2s1j1" value="" size="1" /> </td>
+	<td>	<input id="p2s2j1" type="text" name="p2s2j1" value="" size="1" /> </td>
+	<td>	<input id="p2s3j1" type="text" name="p2s3j1" value="" size="1" /> </td>
+	<td>	<input id="p2s4j1" type="text" name="p2s4j1" value="" size="1" /> </td>
+	<td>	<input id="p2s5j1" type="text" name="p2s5j1" value="" size="1" /> </td>
+	<td>	<input id="p2s6j1" type="text" name="p2s6j1" value="" size="1" /> </td>
+	<td>	<input id="p2s7j1" type="text" name="p2s7j1" value="" size="1" /> </td>
+</tr>                                                                           
+<!-- Partido 2 jugador C -->                                                    
+<tr>	                                                                        
+	<td>	<label id="idC1">C:</label> </div>                                 
+	<td>	<input id="p2s1j2" type="text" name="p2s1j2" value="" size="1" /> </td>
+	<td>	<input id="p2s2j2" type="text" name="p2s2j2" value="" size="1" /> </td>
+	<td>	<input id="p2s3j2" type="text" name="p2s3j2" value="" size="1" /> </td>
+	<td>	<input id="p2s4j2" type="text" name="p2s4j2" value="" size="1" /> </td>
+	<td>	<input id="p2s5j2" type="text" name="p2s5j2" value="" size="1" /> </td>
+	<td>	<input id="p2s6j2" type="text" name="p2s6j2" value="" size="1" /> </td>
+	<td>	<input id="p2s7j2" type="text" name="p2s7j2" value="" size="1" /> </td>
+</tr>
+
+
+
+	
+<!-- Partido 3 jugador B -->  
+<tr>	
+	<td>	<label id="idB2">B:</label> </td>
+	<td>	<input id="p3s1j1" type="text" name="p3s1j1" value="" size="1" /> </td>
+	<td>	<input id="p3s2j1" type="text" name="p3s2j1" value="" size="1" /> </td>
+	<td>	<input id="p3s3j1" type="text" name="p3s3j1" value="" size="1" /> </td>
+	<td>	<input id="p3s4j1" type="text" name="p3s4j1" value="" size="1" /> </td>
+	<td>	<input id="p3s5j1" type="text" name="p3s5j1" value="" size="1" /> </td>
+	<td>	<input id="p3s6j1" type="text" name="p3s6j1" value="" size="1" /> </td>
+	<td>	<input id="p3s7j1" type="text" name="p3s7j1" value="" size="1" /> </td>
+</tr>
+<!-- Partido 3 jugador C -->  
+<tr>	
+	<td>	<label id="idC2">C:</label> </td>
+	<td>	<input id="p3s1j2" type="text" name="p3s1j2" value="" size="1" /> </td>
+	<td>	<input id="p3s2j2" type="text" name="p3s2j2" value="" size="1" /> </td>
+	<td>	<input id="p3s3j2" type="text" name="p3s3j2" value="" size="1" /> </td>
+	<td>	<input id="p3s4j2" type="text" name="p3s4j2" value="" size="1" /> </td>
+	<td>	<input id="p3s5j2" type="text" name="p3s5j2" value="" size="1" /> </td>
+	<td>	<input id="p3s6j2" type="text" name="p3s6j2" value="" size="1" /> </td>
+	<td>	<input id="p3s7j2" type="text" name="p3s7j2" value="" size="1" /> </td>
+</tr>
+</table>
+
+
+	<!-- Botón que hace la llamada a la función validarFormulario() para enviar formulario -->
+	<input onclick="validarFormulario()" type="button" value="Desempatar" /> 
+	</form>
+
+
+<!-- Consola dónde mostramos mensajes devueltos -->
+	<div id="resultados">Resultados....</div>
+</center>		
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>
